@@ -1,0 +1,218 @@
+[
+    {
+        "id": 100,
+        "name": "Muzzarella",
+        "price": 2200,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 101,
+        "name": "Con Jamón",
+        "price": 2500,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 102,
+        "name": "Especial",
+        "price": 3200,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 103,
+        "name": "Super Especial",
+        "price": 3800,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 104,
+        "name": "Calabresa",
+        "price": 2700,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 105,
+        "name": "Fugazza",
+        "price": 2500,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 106,
+        "name": "Napolitana",
+        "price": 2600,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 107,
+        "name": "Provenzal",
+        "price": 2500,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 108,
+        "name": "Provenzal con anchoas",
+        "price": 3200,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 109,
+        "name": "Con Huevo",
+        "price": 2500,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 110,
+        "name": "Roquefort",
+        "price": 2500,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 111,
+        "name": "Primavera",
+        "price": 3500,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 112,
+        "name": "Alemana",
+        "price": 3200,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 113,
+        "name": "Palmitos",
+        "price": 3800,
+        "Category": "Pizzas"
+    },
+    {
+        "id": 200,
+        "name": "Lomito",
+        "price": 3700,
+        "Category": "Sandwichs"
+    },
+    {
+        "id": 201,
+        "name": "Pollo",
+        "price": 3500,
+        "Category": "Sandwichs"
+    },
+    {
+        "id": 202,
+        "name": "Milanesa de carne",
+        "price": 3900,
+        "Category": "Sandwichs"
+    },
+    {
+        "id": 203,
+        "name": "Milanesa de pollo",
+        "price": 3400,
+        "Category": "Sandwichs"
+    },
+    {
+        "id": 300,
+        "name": "Arabes",
+        "price": 3500,
+        "priceind": 350,
+        "Category": "Empanadas"
+    },
+    {
+        "id": 301,
+        "name": "Criollas",
+        "price": 3500,
+        "priceind": 350,
+        "Category": "Empanadas"
+    },
+    {
+        "id": 302,
+        "name": "Criollas dulces",
+        "price": 3500,
+        "priceind": 350,
+        "Category": "Empanadas"
+    },
+    {
+        "id": 303,
+        "name": "Jamon y Queso",
+        "price": 3500,
+        "priceind": 350,
+        "Category": "Empanadas"
+    },
+    {
+        "id": 304,
+        "name": "Cebolla y Queso",
+        "price": 3500,
+        "priceind": 350,
+        "Category": "Empanadas"
+    },
+    {
+        "id": 305,
+        "name": "Pollo",
+        "price": 3500,
+        "priceind": 350,
+        "Category": "Empanadas"
+    },
+    {
+        "id": 400,
+        "name": "Canelones",
+        "price": 1700,
+        "Category": "Minutas"
+    },
+    {
+        "id": 401,
+        "name": "Lasagna",
+        "price": 1900,
+        "Category": "Minutas"
+    },
+    {
+        "id": 402,
+        "name": "Tallarines",
+        "price": 1700,
+        "Category": "Minutas"
+    },
+    {
+        "id": 403,
+        "name": "Ravioles",
+        "price": 1900,
+        "Category": "Minutas"
+    },
+    {
+        "id": 404,
+        "name": "Ñoquis",
+        "price": 2100,
+        "Category": "Minutas"
+    },
+    {
+        "id": 405,
+        "name": "Coteleta",
+        "price": 2500,
+        "Category": "Minutas"
+    },
+    {
+        "id": 406,
+        "name": "Bife de pollo",
+        "price": 2300,
+        "Category": "Minutas"
+    },
+    {
+        "id": 407,
+        "name": "Milanesa de carne",
+        "price": 2600,
+        "Category": "Minutas"
+    },
+    {
+        "id": 408,
+        "name": "Mila de carne napolitana",
+        "price": 2900,
+        "Category": "Minutas"
+    },
+    {
+        "id": 409,
+        "name": "Milanesa de pollo",
+        "price": 2300,
+        "Category": "Minutas"
+    },
+    {
+        "id": 410,
+        "name": "Mila de pollo napolitana",
+        "price": 2600,
+        "Category": "Minutas"
+    }
+]

@@ -1,0 +1,74 @@
+.home {
+    margin: 0;
+    padding: 0;
+    width: 1386px;
+    height: 700px;
+    background-color: rgb(248, 248, 244);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "op1 op2 op3"
+    "op4 op5 op6";
+    justify-items: center;
+    align-items: center;
+}
+
+.imgH {
+    height: 150px;
+    width: 150px;
+    transition: all 0.1s linear;
+}
+.imgH:hover {
+    transform: scale(1.02);
+}
+
+.op1 {
+    grid-area: op1;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.op2 {
+    grid-area: op2;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.op3 {
+    grid-area: op3;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.op4 {
+    grid-area: op4;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.op5 {
+    grid-area: op5;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.op6 {
+    grid-area: op6;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+}
