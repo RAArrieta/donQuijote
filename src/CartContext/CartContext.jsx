@@ -1,13 +1,15 @@
-import Config from "../Data/Config";
+import Product from "../Data/Product";
+import ListProducts from "../Data/ListProducts";
 import { createContext } from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const productos = Config();
+  
+  const listProducts = ListProducts();
 
   return (
-    <CartContext.Provider value={{ productos }}>
+    <CartContext.Provider value={{ listProducts, Product }}>
       {children}
     </CartContext.Provider>
   );

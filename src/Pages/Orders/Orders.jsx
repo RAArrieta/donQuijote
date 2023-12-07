@@ -1,13 +1,32 @@
-import { useContext } from "react";
 import "./Orders.css";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../CartContext/CartContext";
 
-
 const Orders = () => {
-  
-  const {productos} = useContext (CartContext)
+  const { listProducts, Product } = useContext(CartContext);
 
-  return <div className="orders">{productos.length>0 && productos[0].name}</div>;
+  const [id, setId] = useState();
+  let codigo = 0;
+  const Codigo = (e) => {
+    codigo = Number(e.target.value);
+  };
+  const ingCodigo = () => {
+    setId(codigo);
+  };
+
+  const product = Product(id);
+
+  useEffect(() => {
+    console.log(product);
+  });
+
+  return (
+    <div className="orders">
+      {listProducts.length > 0 && listProducts[0].name}
+      <input type="number" placeholder="Codigo" onChange={Codigo} />
+      <button onClick={ingCodigo}>ingresar</button>
+    </div>
+  );
 };
 
 export default Orders;
