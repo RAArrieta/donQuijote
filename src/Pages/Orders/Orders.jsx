@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../CartContext/CartContext";
 
 const Orders = () => {
-  const { listProducts, Product } = useContext(CartContext);
+  const { db, FetchProduct } = useContext(CartContext);
 
   const [id, setId] = useState();
   let codigo = 0;
@@ -14,15 +14,16 @@ const Orders = () => {
     setId(codigo);
   };
 
-  const product = Product(id);
+  const product = FetchProduct(id);
 
   useEffect(() => {
     console.log(product);
   });
 
+
   return (
     <div className="orders">
-      {listProducts.length > 0 && listProducts[0].name}
+      {db.length > 0 && db[0].name}
       <input type="number" placeholder="Codigo" onChange={Codigo} />
       <button onClick={ingCodigo}>ingresar</button>
     </div>
