@@ -1,26 +1,8 @@
-import { useContext, useEffect, useState } from "react";
-import { CartContext } from "../CartContext/CartContext";
+const FetchProduct = (productCode, products) => {
 
-const FetchProduct = (id) => {
-  const { db } = useContext(CartContext);
+  const foundProduct = products.find(product => product.id === productCode)
 
-  const [product, setProduct] = useState();
-
-  const FetchProductID = () => {
-    return new Promise((resolve, reject) => {
-      resolve(db);
-    }).then((res) => {
-      console.log(res)
-      // const prod = res.find((item) => item.id === id)
-      // setProduct(prod);
-    });
-  };
-
-  useEffect(() => {
-    FetchProductID();
-  });
-
-  return product;
+  return foundProduct
 };
 
 export default FetchProduct;

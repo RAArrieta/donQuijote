@@ -4,10 +4,11 @@ import { CartContext } from "../../CartContext/CartContext";
 
 const Catalog = () => {
 
-  const { listProducts } = useContext(CartContext);
+  const {products}=useContext(CartContext)
+  console.log(products)
   
   return (
-    <div className="catalog">{listProducts[1].name}</div>
+    <div className="catalog">Catalogo</div>
   )
 }
 

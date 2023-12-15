@@ -1,31 +1,54 @@
 import "./Orders.css";
-import { useContext, useEffect, useState } from "react";
-import { CartContext } from "../../CartContext/CartContext";
+import InputOrders from "./InputOrders";
+import { useState } from "react";
 
 const Orders = () => {
-  const { db, FetchProduct } = useContext(CartContext);
+  const [newOrderOn, setNewOrderOn] = useState (false);
+  const [orders, setOrders] = useState([]);
+  const [newOrder, setNewOrder] = useState([]);
 
-  const [id, setId] = useState();
-  let codigo = 0;
-  const Codigo = (e) => {
-    codigo = Number(e.target.value);
-  };
-  const ingCodigo = () => {
-    setId(codigo);
+  const handleNewProductOrder = (newProductOrder) => {
+    setNewOrder((prevOrders) => [...prevOrders, newProductOrder]);
   };
 
-  const product = FetchProduct(id);
+  const handleNewOrder = () => {
+    if (newOrder != null || newOrder.length > 0) {
+      setNewOrder([]);
+      setNewOrderOn(true);
+    } else {
+      alert("No hay productos cargados...");
+    }
+  };
 
-  useEffect(() => {
-    console.log(product);
-  });
+  const handlePushOrder = () => {
+    if (newOrder != null && newOrder.length > 0) {
+      setOrders((prevOrders) => [...prevOrders, newOrder]);
+      setNewOrder([]);
+      setNewOrderOn(false);
+    } else {
+      alert("No hay productos en el pedido actual.");
+    }
+  };
 
-
+  console.log(orders);
   return (
-    <div className="orders">
-      {db.length > 0 && db[0].name}
-      <input type="number" placeholder="Codigo" onChange={Codigo} />
-      <button onClick={ingCodigo}>ingresar</button>
+    <div>
+      <button onClick={handleNewOrder}>Nuevo Pedido</button>
+      <button onClick={handlePushOrder}>Cerrar Pedido</button>
+
+      <InputOrders newOrderOn={newOrderOn} onNewProductOrder={handleNewProductOrder} />
+
+      <div className="existing-orders">
+        <h2>Existing Orders</h2>
+        <ul>
+          {newOrder.map((order, index) => (
+            <li key={index}>
+              {order.name} - Quantity: {order.quantity} - Subtotal: $
+              {order.subTotalPrice}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

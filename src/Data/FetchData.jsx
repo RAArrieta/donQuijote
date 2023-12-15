@@ -1,34 +1,26 @@
-import { useContext, useEffect, useState } from "react";
-import { CartContext } from "../CartContext/CartContext";
-import { collection, getDocs } from "firebase/firestore"
-
+import db from "../Data/ConfigFirebase";
+import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
 
 const FetchData = () => {
-  const { dbF } = useContext(CartContext);
-  const [db, setdb] = useState([]);
 
-
-  // const fetchDB = () => {
-  //   return new Promise((resolve) => {
-  //     resolve(data);
-  //   });
-  // };
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const productsRef = collection(dbF, "products")
+    const productsRef = collection(db, "ListProducts");
 
-    getDocs(productsRef)
-    .then ((resp)=>{
-      setdb(resp.docs)
-    })
-    // fetchDB().then((res) => {
-    //   setdb(res);
-    // });
-  });
+    getDocs(productsRef).then((resp) => {
+      setProducts(
+        resp.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+        })
+      );
+    });
+  }, []);
 
-  return db;
-};
+  return products
+}
 
-export default FetchData;
+export default FetchData
 
 
